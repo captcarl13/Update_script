@@ -20,10 +20,17 @@ mas outdated
 sleep 5
 mas upgrade
 sleep 1
-ECHO Syncing Google Drive share...
-sleep 2
-rsync -var --progress ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
-sleep 3
+afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
+read -r -p "Are you at work? [y/N] " response
+  if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
+    then
+      sleep 1
+    else
+      ECHO Syncing Google Drive share...
+      sleep 2
+      rsync -var --progress ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
+      sleep 3
+  fi
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
