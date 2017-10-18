@@ -1,5 +1,5 @@
 #!/bin/bash
-ECHO Checking for macOS updates...
+ECHO Checking macOS updates...
 sleep 1
 ECHO Please enter Administrator password:
 # softwareupdate is Apple's first-party system updater
@@ -14,13 +14,15 @@ brew outdated
 sleep 3
 brew upgrade
 sleep 3
-ECHO Checking for and updating App Store Apps...
+ECHO Checking and updating App Store Apps...
 # mas is a Homebrew package which updates third-party App Store apps
 mas outdated
 sleep 5
 mas upgrade
 sleep 1
-afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
+# Software update phase ends here
+# Question about Syncing Google Drive with iCloud Drive
+afplay /System/Library/Sounds/Glass.aiff
 read -r -p "Are you at work? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
@@ -31,6 +33,8 @@ read -r -p "Are you at work? [y/N] " response
       rsync -var --progress ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
       sleep 3
   fi
+# GDrive and iCloud Drive sync ends here
+# Reboot prompt below
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
@@ -41,3 +45,5 @@ read -r -p "Would you like to reboot? [y/N] " response
     else
       ECHO Done!
   fi
+# Reboot prompt ends here
+# end of script
