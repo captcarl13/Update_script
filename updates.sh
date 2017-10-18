@@ -3,7 +3,7 @@ ECHO Checking for macOS updates...
 sleep 1
 ECHO Please enter Administrator password:
 # softwareupdate is Apple's first-party system updater
-sudo softwareupdate -ia
+sudo softwareupdate -ia --verbose
 sleep 3
 # Homebrew is a third-party package manager
 ECHO Updating Homebrew...
