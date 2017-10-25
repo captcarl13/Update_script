@@ -30,7 +30,7 @@ read -r -p "Are you at work? [y/N] " response
     else
       ECHO Syncing Google Drive share...
       sleep 2
-      rsync -var --progress ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
+      rsync -var --progress --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
       sleep 3
   fi
 # GDrive and iCloud Drive sync ends here
