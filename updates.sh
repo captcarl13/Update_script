@@ -2,7 +2,7 @@
 ECHO Checking macOS updates...
 sleep 1
 ECHO Please enter Administrator password:
-# softwareupdate is Apple's first-party system updater
+# softwareupdate is Apple's CLI update utility
 sudo softwareupdate -ia --verbose
 sleep 1
 # Homebrew is a third-party package manager
@@ -15,7 +15,7 @@ sleep 1
 brew upgrade
 sleep 1
 ECHO Checking and updating App Store Apps...
-# mas is a Homebrew package which updates third-party App Store apps
+# mas-cli is a Homebrew package which updates third-party App Store apps
 mas outdated
 sleep 3
 mas upgrade
@@ -30,7 +30,9 @@ read -r -p "Are you at work? [y/N] " response
     else
       ECHO Syncing Google Drive share...
       sleep 1
+      # RSYNC begins here
       rsync -var --progress --exclude .DS_Store --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
+      # RSYNC ends here
       sleep 1
   fi
 # GDrive and iCloud Drive sync ends here
