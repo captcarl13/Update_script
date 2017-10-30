@@ -1,6 +1,7 @@
 #!/bin/bash
 ECHO Checking macOS updates...
 sleep 1
+# sudo is required for softwareupdate
 ECHO Please enter Administrator password:
 # softwareupdate is Apple's CLI update utility
 sudo softwareupdate -ia --verbose
