@@ -4,7 +4,7 @@ sleep 1
 # sudo is required for softwareupdate
 ECHO Please enter Administrator password:
 # softwareupdate is Apple's CLI update utility
-sudo softwareupdate -ia --verbose
+sudo softwareupdate --verbose --all -ia
 sleep 1
 # Homebrew is a third-party package manager
 ECHO Updating Homebrew...
