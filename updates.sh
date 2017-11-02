@@ -32,13 +32,14 @@ read -r -p "Are you at work? [y/N] " response
       ECHO Syncing Google Drive share...
       sleep 1
       # RSYNC begins here
-      rsync -var --progress --exclude .DS_Store --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
+      rsync -varh --progress --exclude .DS_Store --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
       # RSYNC ends here
       sleep 1
   fi
 # GDrive and iCloud Drive sync ends here
 # Reboot prompt begins here
-afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
+afplay /System/Library/Sounds/Glass.aiff
+ECHO Updates complete!
 read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
