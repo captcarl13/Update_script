@@ -2,7 +2,7 @@
 ECHO Checking macOS updates...
 sleep 1
 # sudo is required for softwareupdate
-ECHO Please enter Administrator password:
+afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
 # softwareupdate is Apple's CLI update utility
 sudo softwareupdate --verbose --all -ia
 sleep 1
@@ -23,8 +23,7 @@ mas upgrade
 sleep 1
 # Software update phase ends here
 # Question about Syncing Google Drive with iCloud Drive
-afplay /System/Library/Sounds/Glass.aiff
-read -r -p "Are you at work? [y/N] " response
+afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
       sleep 1
@@ -37,9 +36,8 @@ read -r -p "Are you at work? [y/N] " response
       sleep 1
   fi
 # GDrive and iCloud Drive sync ends here
+afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 # Reboot prompt begins here
-afplay /System/Library/Sounds/Glass.aiff
-ECHO Updates complete!
 read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
