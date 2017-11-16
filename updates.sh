@@ -1,12 +1,12 @@
 #!/bin/bash
 ECHO Checking macOS updates...
 sleep 1
-# sudo is required for softwareupdate
+#sudo is required for softwareupdate
 afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
-# softwareupdate is Apple's CLI update utility
+#softwareupdate is Apple's CLI update utility
 sudo softwareupdate --verbose --all -ia
 sleep 1
-# Homebrew is a third-party package manager
+#Homebrew is a third-party package manager
 ECHO Updating Homebrew...
 brew update
 sleep 1
@@ -16,13 +16,14 @@ sleep 1
 brew upgrade
 sleep 1
 ECHO Checking and updating App Store Apps...
-# mas-cli is a Homebrew package which updates third-party App Store apps
+#mas-cli is a Homebrew package which updates third-party App Store apps
 mas outdated
 sleep 3
 mas upgrade
 sleep 1
-# Software update phase ends here
-# Question about Syncing Google Drive with iCloud Drive
+#ADD SECTION TO UPDATE ATOM IDE HERE???
+#Software update phase ends here
+#Question about Syncing Google Drive with iCloud Drive
 afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
@@ -30,14 +31,14 @@ afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " 
     else
       ECHO Syncing Google Drive share...
       sleep 1
-      # RSYNC begins here
+      #rsync begins here
       rsync -varh --progress --exclude .DS_Store --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
-      # RSYNC ends here
+      #rsync ends here
       sleep 1
   fi
-# GDrive and iCloud Drive sync ends here
+#GDrive and iCloud Drive sync ends here
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
-# Reboot prompt begins here
+#Reboot prompt begins here
 read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
@@ -47,5 +48,5 @@ read -r -p "Would you like to reboot? [y/N] " response
     else
       ECHO Done!
   fi
-# Reboot prompt ends here
-# end of script
+#Reboot prompt ends here
+#end of script
