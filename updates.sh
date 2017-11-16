@@ -21,8 +21,11 @@ mas outdated
 sleep 3
 mas upgrade
 sleep 1
-#ADD SECTION TO UPDATE ATOM IDE HERE???
 #Software update phase ends here
+#Atom IDE upgrade phase begins here
+ECHO Updating Atom...
+apm upgrade
+  #apm prompts user for input, need to type yes
 #Question about Syncing Google Drive with iCloud Drive
 afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
