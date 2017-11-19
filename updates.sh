@@ -25,8 +25,7 @@ sleep 1
 #Atom IDE upgrade phase begins here
 ECHO Updating Atom...
 #Trying --no-confirm to see if I can eliminate another prompt for user input
-afplay /System/Library/Sounds/Glass.aiff & apm upgrade --no-confirm
-  #apm prompts user for input, need to type yes
+apm upgrade --no-confirm
 #Question about Syncing Google Drive with iCloud Drive
 afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
