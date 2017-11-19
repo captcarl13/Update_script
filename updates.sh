@@ -10,10 +10,8 @@ sleep 1
 ECHO Updating Homebrew...
 brew update
 sleep 1
-ECHO The following formulae are OUTDATED and are being UPGRADED:
-brew outdated
-sleep 1
-brew upgrade
+ECHO The following formulae are OUTDATED and will be UPGRADED:
+brew outdated && brew upgrade
 sleep 1
 ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
@@ -24,9 +22,9 @@ sleep 1
 #Software update phase ends here
 #Atom IDE upgrade phase begins here
 ECHO Updating Atom...
-#Trying --no-confirm to see if I can eliminate another prompt for user input
 apm upgrade --no-confirm
 #Question about Syncing Google Drive with iCloud Drive
+#This section can be commented out if moving away from a Mac at work
 afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
@@ -40,6 +38,7 @@ afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " 
       sleep 1
   fi
 #GDrive and iCloud Drive sync ends here
+#Comment out the previous section if moving away from a Mac at work
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 #Reboot prompt begins here
 read -r -p "Would you like to reboot? [y/N] " response
