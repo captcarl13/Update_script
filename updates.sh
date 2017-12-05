@@ -4,13 +4,13 @@ sleep 1
 #sudo is required for softwareupdate
 afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
 #softwareupdate is Apple's CLI update utility
-sudo softwareupdate --verbose --all -ia
+sudo softwareupdate --verbose --all -ia &&
 sleep 1
 #Homebrew is a third-party package manager
 #If brew is not installed uncomment the next line
 #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ECHO Updating Homebrew...
-brew update
+brew update &&
 sleep 1
 ECHO The following formulae are OUTDATED and will be UPGRADED:
 brew outdated && brew upgrade
@@ -19,7 +19,7 @@ ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
 #if mas-cli is not installed, uncomment the next line
 #brew install mas
-mas outdated
+mas outdated &&
 sleep 3
 mas upgrade
 sleep 1
