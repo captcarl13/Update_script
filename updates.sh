@@ -4,7 +4,7 @@ sleep 1
 #sudo is required for softwareupdate
 afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
 #softwareupdate is Apple's CLI update utility
-sudo softwareupdate --verbose --all -ia
+sudo softwareupdate --verbose --all -ia &&
 sleep 1
 #Homebrew is a third-party package manager
 #If brew is not installed uncomment the next line
