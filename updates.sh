@@ -48,7 +48,9 @@ afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
-      ECHO Please enter Administrator password if prompted: & sudo shutdown -r
+      ECHO Please enter Administrator password if prompted:
+      wait 1
+      sudo shutdown -r
       ECHO Rebooting...
       exit
     else
