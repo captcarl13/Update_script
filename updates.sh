@@ -43,7 +43,11 @@ afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " 
   fi
 #GDrive and iCloud Drive sync ends here
 #Comment out or remove previous section if moving away from a Mac at work
-#add section to update Powershell Mac here?
+#PowerShell for macOS updater here
+ECHO Updating PowerShell for macOS...
+sleep 1
+brew cask reinstall powershell
+sleep 1
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 #Reboot prompt begins here
 read -r -p "Would you like to reboot? [y/N] " response
