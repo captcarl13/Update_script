@@ -16,7 +16,7 @@ ECHO The following formulae are OUTDATED and will be UPGRADED:
 brew outdated && brew upgrade
 sleep 1
 #PowerShell for macOS updater here
-ECHO Updating PowerShell for macOS...
+ECHO Updating PowerShell for macOS... (Enter Administrator password if prompted)
 sleep 1
 brew cask reinstall powershell
 sleep 1
