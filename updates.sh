@@ -15,6 +15,11 @@ sleep 1
 ECHO The following formulae are OUTDATED and will be UPGRADED:
 brew outdated && brew upgrade
 sleep 1
+#PowerShell for macOS updater here
+ECHO Updating PowerShell for macOS...
+sleep 1
+brew cask reinstall powershell
+sleep 1
 ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
 #if mas-cli is not installed, uncomment the next line
@@ -43,11 +48,6 @@ afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " 
   fi
 #GDrive and iCloud Drive sync ends here
 #Comment out or remove previous section if moving away from a Mac at work
-#PowerShell for macOS updater here
-ECHO Updating PowerShell for macOS...
-sleep 1
-brew cask reinstall powershell
-sleep 1
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 #Reboot prompt begins here
 read -r -p "Would you like to reboot? [y/N] " response
