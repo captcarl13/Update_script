@@ -16,7 +16,7 @@ ECHO The following formulae are OUTDATED and will be UPGRADED:
 brew outdated && brew upgrade
 sleep 1
 #PowerShell for macOS updater here
-ECHO Updating PowerShell for macOS... (Enter Administrator password if prompted)
+ECHO Updating PowerShell for macOS...Enter Administrator password if prompted...
 sleep 1
 brew cask reinstall powershell
 sleep 1
@@ -42,7 +42,7 @@ afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " 
       ECHO Syncing Google Drive share...
       sleep 1
       #rsync begins here
-      rsync -varh --progress --exclude .DS_Store --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
+      rsync -varh --progress --delete --exclude .DS_Store --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
       #rsync ends here
       sleep 1
   fi
