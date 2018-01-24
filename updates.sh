@@ -18,7 +18,7 @@ sleep 1
 #PowerShell for macOS updater here
 ECHO Updating PowerShell for macOS...Enter Administrator password if prompted...
 sleep 1
-brew cask reinstall powershell
+brew cask upgrade powershell
 sleep 1
 ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
