@@ -2,7 +2,7 @@
 ECHO Checking for macOS system, security, and core App updates...
 sleep 1
 #sudo is required for softwareupdate
-afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
+tput bel & afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
 #softwareupdate is Apple's CLI update utility
 sudo softwareupdate --verbose --all -ia
 sleep 1
@@ -34,7 +34,7 @@ ECHO Updating Atom...
 apm upgrade --no-confirm
 #Question about Syncing Google Drive with iCloud Drive
 #This section can be commented out or removed if moving away from a Mac at work
-afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
+tput bel & afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
       sleep 1
@@ -50,7 +50,7 @@ afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " 
 #Comment out or remove previous section if moving away from a Mac at work
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 #Reboot prompt begins here
-read -r -p "Would you like to reboot? [y/N] " response
+tput bel & read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
       ECHO Please enter Administrator password if prompted:
