@@ -7,8 +7,8 @@ tput bel & afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administ
 sudo softwareupdate --verbose --all -ia
 sleep 1
 #Homebrew is a third-party package manager
-#If brew is not installed uncomment the next line
-#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#If brew is not installed uncomment the next line or copy/paste it into a new term
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ECHO Updating Homebrew...
 brew update &&
 sleep 1
