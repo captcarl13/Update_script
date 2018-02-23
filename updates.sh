@@ -55,7 +55,7 @@ tput bel & read -r -p "Would you like to reboot? [y/N] " response
     then
       ECHO Please enter Administrator password if prompted:
       wait 1
-      sudo shutdown -r & ECHO Rebooting...
+      sudo shutdown -r +1 & ECHO Rebooting...
       exit 0
     else
       ECHO Done!
