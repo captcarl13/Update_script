@@ -25,7 +25,7 @@ ECHO Checking and updating App Store Apps...
 #if mas-cli is not installed, uncomment the next line
 #brew install mas
 mas outdated &&
-sleep 3
+sleep 60
 mas upgrade
 sleep 1
 #Software update phase ends here
