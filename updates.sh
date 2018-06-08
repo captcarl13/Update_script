@@ -34,18 +34,18 @@ ECHO Updating Atom...
 apm upgrade --no-confirm
 #Question about Syncing Google Drive with iCloud Drive
 #This section can be commented out or removed if moving away from a Mac at work
-tput bel & afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
-  if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
-    then
-      sleep 1
-    else
-      ECHO Syncing Google Drive share...
-      sleep 1
-      #rsync begins here
-      rsync -varh --progress --delete --exclude .DS_Store --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
-      #rsync ends here
-      sleep 1
-  fi
+#tput bel & afplay /System/Library/Sounds/Glass.aiff & read -r -p "Are you at work? [y/N] " response
+#  if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
+#    then
+#      sleep 1
+#    else
+#      ECHO Syncing Google Drive share...
+#      sleep 1
+#      #rsync begins here
+#      rsync -varh --progress --delete --exclude .DS_Store --exclude /Apple\ TV\ Photo\ Cache/ ~/Library/Mobile\ Documents/com~apple~CloudDocs/Metroid/ ~/Google\ Drive/Metroid
+#      #rsync ends here
+#      sleep 1
+#  fi
 #GDrive and iCloud Drive sync ends here
 #Comment out or remove previous section if moving away from a Mac at work
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
