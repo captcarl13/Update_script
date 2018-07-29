@@ -10,7 +10,7 @@ sleep 1
 #If brew is not installed uncomment the next line or copy/paste it into a new term
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ECHO Updating Homebrew...
-brew update &&
+brew update
 sleep 1
 ECHO The following formulae are OUTDATED and will be UPGRADED:
 brew outdated && brew upgrade
@@ -24,13 +24,12 @@ ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
 #if mas-cli is not installed, uncomment the next line
 #brew install mas
-mas outdated &&
-sleep 60
+mas outdated & sleep 60
 mas upgrade
 sleep 1
 #Software update phase ends here
 #Atom IDE upgrade phase begins here
-ECHO Updating Atom...
+ECHO Updating Atom packages...
 apm upgrade --no-confirm
 #Question about Syncing Google Drive with iCloud Drive
 #This section can be commented out or removed if moving away from a Mac at work
@@ -49,6 +48,7 @@ apm upgrade --no-confirm
 #GDrive and iCloud Drive sync ends here
 #Comment out or remove previous section if moving away from a Mac at work
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
+sleep 1
 #Reboot prompt begins here
 tput bel & read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
