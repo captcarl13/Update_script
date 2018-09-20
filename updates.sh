@@ -10,8 +10,8 @@ sleep 1
 #If brew is not installed uncomment the next line or copy/paste it into a new term
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ECHO Updating Homebrew...
-brew update &
-sleep 1
+brew update &&
+sleep 1 &&
 ECHO The following formulae are OUTDATED and will be UPGRADED:
 brew outdated && brew upgrade
 sleep 1
