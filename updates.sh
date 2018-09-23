@@ -24,9 +24,10 @@ ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
 #if mas-cli is not installed, uncomment the next line
 #brew install mas
-mas outdated & sleep 60
-mas upgrade
-sleep 1
+#Commenting out until mas is fixed for Mojave
+#mas outdated & sleep 60
+#mas upgrade
+#sleep 1
 #Software update phase ends here
 #Atom IDE upgrade phase begins here
 ECHO Updating Atom packages...
