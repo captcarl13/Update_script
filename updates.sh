@@ -17,6 +17,7 @@ sleep 1
 brew cask upgrade powershell & ECHO Updating PowerShell for macOS...enter Administrator password if prompted...
 sleep 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Atom IDE upgrade phase begins here
 apm upgrade --no-confirm & ECHO Updating Atom packages...
 sleep 1
@@ -27,6 +28,8 @@ tput bel & afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administ
 #softwareupdate is Apple's CLI update utility
 sudo softwareupdate --verbose --all -ia & ECHO Checking and updating App Store Apps...
 =======
+=======
+>>>>>>> parent of 4b63c63... Moved softwareupdate down to the bottom.
 ECHO Checking and updating App Store Apps...
 >>>>>>> parent of 4b63c63... Moved softwareupdate down to the bottom.
 #mas-cli is a Homebrew package which updates third-party App Store apps
