@@ -3,10 +3,8 @@ sleep 1
 #Homebrew is a third-party package manager
 #If brew is not installed uncomment the next line or copy/paste it into a new term
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-ECHO Updating Homebrew...
-brew update &&
-sleep 1 &&
-ECHO The following formulae are OUTDATED and will be UPGRADED:
+ECHO Updating Homebrew... && brew update && sleep 1
+ECHO The following formulae are OUTDATED and will be UPGRADED: && sleep 1
 brew outdated && brew upgrade
 sleep 1
 #PowerShell for macOS updater here
@@ -15,8 +13,7 @@ sleep 1
 brew cask upgrade powershell
 sleep 1
 #Atom IDE upgrade phase begins here
-ECHO Updating Atom packages...
-apm upgrade --no-confirm
+ECHO Updating Atom packages... & apm upgrade --no-confirm
 sleep 1
 ECHO Checking for macOS system, security, and core App updates...
 sleep 1
@@ -29,7 +26,7 @@ ECHO Checking and updating App Store Apps...
 #if mas-cli is not installed, uncomment the next line
 #brew install mas
 #tenatively uncommenting mas seems to work on Mojave
-mas outdated & sleep 60
+mas outdated && sleep 30
 mas upgrade
 sleep 1
 #Software update phase ends here
