@@ -3,9 +3,11 @@ sleep 1
 #Homebrew is a third-party package manager
 #If brew is not installed uncomment the next line or copy/paste it into a new term
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update & ECHO Updating Homebrew... && sleep 1 &&
-ECHO The following formulae are OUTDATED and will be UPGRADED: & sleep 1
-brew outdated && brew upgrade
+brew update & ECHO Updating Homebrew... &&
+sleep 1
+brew outdated & ECHO The following formulae are OUTDATED and will be UPGRADED:
+sleep 1
+brew upgrade
 sleep 1
 #PowerShell for macOS updater here
 brew cask upgrade powershell & ECHO Updating PowerShell for macOS...enter Administrator password if prompted...
@@ -35,7 +37,8 @@ tput bel & read -r -p "Would you like to reboot? [y/N] " response
     then
       ECHO Please enter Administrator password if prompted:
       wait 1
-      ECHO Rebooting... & sudo shutdown -r +1
+      ECHO Rebooting...
+      sudo shutdown -r +1
       exit 0
     else
       ECHO Done!
