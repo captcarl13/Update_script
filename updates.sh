@@ -13,7 +13,7 @@ sleep 1
 #PowerShell for macOS updater here
 ECHO Updating PowerShell for macOS...Enter Administrator password if prompted...
 sleep 1
-brew cask upgrade powershell
+brew cask upgrade
 sleep 1
 #Atom IDE upgrade phase begins here
 ECHO Updating Atom packages...
