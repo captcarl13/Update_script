@@ -10,8 +10,8 @@ sleep 1 &&
 ECHO The following formulae are OUTDATED and will be UPGRADED:
 brew outdated && brew upgrade
 sleep 1
-#PowerShell for macOS updater here
-ECHO Updating PowerShell for macOS...Enter Administrator password if prompted...
+#HBB casks updater here
+ECHO Updating Homebrew Casks...Enter Administrator password if prompted...
 sleep 1
 brew cask upgrade
 sleep 1
@@ -24,12 +24,9 @@ sleep 1
 #sudo is required for softwareupdate
 tput bel & afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
 #softwareupdate is Apple's CLI update utility
-sudo softwareupdate --verbose --all -ia
+sudo softwareupdate --verbose -ia
 ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
-#if mas-cli is not installed, uncomment the next line
-#brew install mas
-#tenatively uncommenting mas seems to work on Mojave
 mas outdated & sleep 60
 mas upgrade
 sleep 1
