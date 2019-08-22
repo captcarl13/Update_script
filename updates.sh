@@ -1,5 +1,6 @@
 
 #!/bin/bash
+#TODO update for zsh env
 sleep 1
 #Homebrew is a third-party package manager
 #If brew is not installed uncomment the next line or copy/paste it into a new term
