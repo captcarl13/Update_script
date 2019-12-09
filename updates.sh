@@ -5,12 +5,8 @@ sleep 1
 #Homebrew is a third-party package manager
 #If brew is not installed uncomment the next line or copy/paste it into a new term
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-ECHO Updating Homebrew...
-brew update &&
-sleep 1 &&
-ECHO The following formulae are OUTDATED and will be UPGRADED:
-brew outdated && brew upgrade
-sleep 1
+ECHO Updating and upgrading Homebrew packages...
+brew upgrade && sleep 1
 #HBB casks updater here
 ECHO Updating Homebrew Casks...Enter Administrator password if prompted...
 sleep 1
@@ -39,7 +35,7 @@ tput bel & read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
     then
       ECHO Please enter Administrator password if prompted:
-      wait 1
+      #wait 1
       sudo shutdown -r +1 & ECHO Rebooting...
       exit 0
     else
