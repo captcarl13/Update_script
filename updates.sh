@@ -22,11 +22,12 @@ sleep 1
 tput bel & afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
 #softwareupdate is Apple's CLI update utility
 sudo softwareupdate --verbose -ia
-ECHO Checking and updating App Store Apps...
+# commenting out 26-31 until mas is fixed...
+#ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
-mas outdated & sleep 60
-mas upgrade
-sleep 1
+#mas outdated & sleep 60
+#mas upgrade
+#sleep 1
 #Software update phase ends here
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 sleep 1
