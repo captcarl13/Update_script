@@ -6,7 +6,7 @@ sleep 1
 #If brew is not installed uncomment the next line or copy/paste it into a new term
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 #Upgrade ohmyzsh
-env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
+omz upgrade
 sleep 1
 ECHO Updating and upgrading Homebrew packages...
 brew upgrade && sleep 1
