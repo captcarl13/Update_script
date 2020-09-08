@@ -13,7 +13,7 @@ brew upgrade && sleep 1
 #HBB casks updater here
 ECHO Updating Homebrew Casks...Enter Administrator password if prompted...
 sleep 1
-brew cask upgrade
+brew upgrade --cask
 sleep 1
 #Atom IDE upgrade phase begins here
 ECHO Updating Atom packages...
@@ -26,11 +26,11 @@ tput bel & afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administ
 #softwareupdate is Apple's CLI update utility
 sudo softwareupdate --verbose -ia
 # commenting out 26-31 until mas is fixed...
-#ECHO Checking and updating App Store Apps...
+ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
 #mas outdated & sleep 60
-#mas upgrade
-#sleep 1
+mas upgrade
+sleep 1
 #Software update phase ends here
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 sleep 1
