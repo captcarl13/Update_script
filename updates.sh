@@ -8,13 +8,8 @@ sleep 1
 #Upgrade ohmyzsh
 env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
 sleep 1
-ECHO Updating and upgrading Homebrew packages...
+ECHO Updating and upgrading Homebrew packages...Enter Administrator password if prompted...
 brew upgrade && sleep 1
-#HBB casks updater here
-ECHO Updating Homebrew Casks...Enter Administrator password if prompted...
-sleep 1
-brew upgrade --cask
-sleep 1
 #Atom IDE upgrade phase begins here
 ECHO Updating Atom packages...
 apm upgrade --no-confirm
