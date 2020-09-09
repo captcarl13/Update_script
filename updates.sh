@@ -9,7 +9,7 @@ sleep 1
 env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
 sleep 1
 ECHO Updating and upgrading Homebrew packages...Enter Administrator password if prompted...
-brew upgrade && sleep 1
+brew upgrade && brew upgrade --cask && sleep 1
 #Atom IDE upgrade phase begins here
 ECHO Updating Atom packages...
 apm upgrade --no-confirm
