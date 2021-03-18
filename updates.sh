@@ -1,10 +1,8 @@
-
-#!/bin/zsh
-#TODO update for zsh env
+#!/bin/bash
 sleep 1
 #Homebrew is a third-party package manager
 #If brew is not installed uncomment the next line or copy/paste it into a new term
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 #Upgrade ohmyzsh
 env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
 sleep 1
@@ -20,10 +18,10 @@ sleep 1
 tput bel & afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administrator password:
 #softwareupdate is Apple's CLI update utility
 sudo softwareupdate --verbose -ia
-# commenting out 26-31 until mas is fixed...
+#commenting out 22-26 until mas is fixed...
 ECHO Checking and updating App Store Apps...
 #mas-cli is a Homebrew package which updates third-party App Store apps
-#mas outdated & sleep 60
+mas outdated & sleep 60
 mas upgrade
 sleep 1
 #Software update phase ends here
