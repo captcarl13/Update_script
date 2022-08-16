@@ -8,10 +8,6 @@ env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
 sleep 1
 ECHO Updating and upgrading Homebrew packages...Enter Administrator password if prompted...
 brew upgrade && brew upgrade --cask && sleep 1
-#Atom IDE upgrade phase begins here
-ECHO Updating Atom packages...
-apm upgrade --no-confirm
-sleep 1
 ECHO Checking for macOS system, security, and core App updates...
 sleep 1
 #sudo is required for softwareupdate
