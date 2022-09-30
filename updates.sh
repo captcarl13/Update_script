@@ -16,7 +16,6 @@ tput bel & afplay /System/Library/Sounds/Glass.aiff & ECHO Please enter Administ
 sudo softwareupdate --verbose -ia
 #commenting out 22-26 until mas is fixed...
 #ECHO Checking and updating App Store Apps...
-#mas-cli is a Homebrew package which updates third-party App Store apps
 #mas outdated & sleep 5
 #mas upgrade
 #sleep 1
