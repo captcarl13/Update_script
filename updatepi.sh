@@ -8,7 +8,7 @@ wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound
 sleep 1
 #Reboot prompt begins here
 
-read -r -p "Would you like to reboot? [y/N] " response
+echo -e \n read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
 	then
 	  echo Please enter Administrator password if prompted:
