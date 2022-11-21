@@ -7,7 +7,7 @@ sudo apt autoremove -y
 wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound/root.hints
 sleep 1
 #Reboot prompt begins here
-echo -e \n
+echo
 read -r -p "Would you like to reboot? [y/N] " response
   if [[ "$response" =~ ^([yY][eE]|[yY])+$ ]]
 	then
