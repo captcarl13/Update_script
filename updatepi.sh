@@ -1,5 +1,5 @@
 #!/bin/bash
-# comment out line 3 if zsh isn't your default shell
+# Upgrade ohmyzsh -- comment out below line if zsh isn't your default shell and aren't using ohmyzsh
 env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
 sudo apt update
 sudo apt upgrade -y
