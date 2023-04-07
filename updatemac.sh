@@ -1,6 +1,6 @@
 #!/bin/bash
 # Upgrade ohmyzsh -- comment out below line if zsh isn't your default shell and aren't using ohmyzsh
-env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
+$ZSH/tools/upgrade.sh
 sleep 1
 # if brew isn't installed visit brew.sh or paste the following line into a new shell:
 #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
