@@ -5,7 +5,7 @@ sleep 1
 # if brew isn't installed visit brew.sh or paste the following line into a new shell:
 #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo Updating and upgrading Homebrew packages...Enter Administrator password if prompted...
-brew upgrade && brew upgrade --cask && sleep 1
+brew upgrade && brew upgrade --greedy && sleep 1
 echo Checking for macOS system, security, and core App updates...
 sleep 1
 # sudo is required for softwareupdate
