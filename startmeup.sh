@@ -6,7 +6,7 @@
 #tmux
 #htop
 #neofetch
-START ME UP
+ECHO START ME UP
 
 wait 3
 
