@@ -6,12 +6,10 @@
 #github cli
 #zsh and plugins
 #ohmyzsh
-ECHO START ME UP
-
-wait 3
+sleep 1 && echo START ME UP && sleep 3
 
 sudo apt update
-sudo apt install tmux htop neofetch emacs
+sudo apt install tmux htop neofetch emacs -y
 
 #github cli
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
@@ -22,7 +20,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt install gh -y
 
 #zsh and ohmyzsh
-sudo apt install zsh
+sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #zsh plugins
