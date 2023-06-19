@@ -1,17 +1,17 @@
 #quick install script, use this to install basic tools for fresh install. update regularly as you remember to add more tools to first-time setup
 #tools in this script:
-#github cli
-#zsh
-#ohmyzsh
 #tmux
-#htop
 #neofetch
+#emacs
+#github cli
+#zsh and plugins
+#ohmyzsh
 ECHO START ME UP
 
 wait 3
 
 sudo apt update
-sudo apt install tmux htop neofetch 
+sudo apt install tmux htop neofetch emacs
 
 #github cli
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
