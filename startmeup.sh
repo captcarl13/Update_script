@@ -6,6 +6,10 @@
 #tmux
 #htop
 #neofetch
+START ME UP
+
+wait 3
+
 sudo apt update
 sudo apt install tmux htop neofetch 
 
