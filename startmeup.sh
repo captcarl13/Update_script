@@ -6,6 +6,8 @@
 #github cli
 #zsh and plugins
 #ohmyzsh
+#Docker <== install for Pi is commented out as not every Pi can run Docker effectively, uncomment out or install manually. For more Docker info see https://docs.docker.com/engine/install/raspbian/
+
 sleep 1 && echo START ME UP && sleep 3
 
 sudo apt update
@@ -20,13 +22,19 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt install gh -y
 
 #zsh and ohmyzsh
+echo Installing zsh and dependencies. Do not change default shell to zsh until script finizhes remaining steps...
+sleep 3
 sudo apt install zsh -y
+sleep 1
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-
 #powerlevel10k REQUIRES OHMYZSH
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+#Docker, see notes above
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
