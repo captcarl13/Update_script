@@ -10,7 +10,7 @@ echo Checking for macOS system, security, and core App updates...
 sleep 1
 # sudo is required for softwareupdate
 tput bel & afplay /System/Library/Sounds/Glass.aiff & echo Please enter Administrator password if prompted:
-sudo softwareupdate --verbose -ia
+sudo softwareupdate --verbose --install --all
 # software update phase ends here
 afplay /System/Library/Sounds/Glass.aiff & ECHO Updates complete!
 sleep 1
