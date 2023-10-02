@@ -5,6 +5,8 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt full-upgrade -y
 sudo apt autoremove -y
+sleep 1
+~/padd.sh -u
 # uncomment line 9 if you aren't running Pi-Hole+Unbound
 # wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound/root.hints
 sleep 1
