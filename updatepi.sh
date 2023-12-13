@@ -6,12 +6,12 @@ sudo apt upgrade -y
 sudo apt full-upgrade -y
 sudo apt autoremove -y
 ~/padd.sh -u
-#uncomment line 9 if you aren't running Pi-Hole+Unbound
+#uncomment the line below if you aren't running Pi-Hole+Unbound
 #wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound/root.hints
 sleep 1
 echo
 echo
-#comment out 15-25 if you are not using cloudflared
+#comment out 15-22 if you are not using cloudflared
 #echo Updating cloudflared...
 #sleep 1
 #wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64
@@ -20,8 +20,6 @@ echo
 #sudo chmod +x /usr/local/bin/cloudflared
 #sudo systemctl start cloudflared
 #cloudflared -v
-#sleep 2
-#sudo systemctl status cloudflared
 sleep 2
 #Reboot prompt begins here
 read -r -p "Would you like to reboot? [y/N] " response
