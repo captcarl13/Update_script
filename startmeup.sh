@@ -1,12 +1,16 @@
-#quick install script, use this to install basic tools for fresh install. update regularly as you remember to add more tools to first-time setup
-#tools in this script:
-#tmux
-#neofetch
-#emacs
-#github cli
-#zsh and plugins
-#ohmyzsh
-#Docker <== install for Pi is commented out as not every Pi can run Docker effectively, uncomment out or install manually. For more Docker info see https://docs.docker.com/engine/install/raspbian/
+: <<'comment'
+quick install script, use this to install basic tools for fresh install. update regularly as you remember to add more tools to first-time setup
+tools in this script:
+tmux
+neofetch
+emacs
+github cli
+zsh and plugins
+ohmyzsh
+glances
+Docker NOTE: Docker doesn't run effectively on 32-bit Pi's and should be installed manually. For more Docker info see https://docs.docker.com/engine/install/raspbian/
+To install Pi-Hole, Unbound, and PiVPN see lines and remove from block as needed. For more information: https://docs.pi-hole.net/main/basic-install/ and https://docs.pi-hole.net/guides/dns/unbound/
+comment
 
 sleep 1 && echo START ME UP && sleep 3
 
@@ -35,6 +39,19 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 #powerlevel10k REQUIRES OHMYZSH
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+#glances
+curl -L https://bit.ly/glances | /bin/bash
+
 #Docker, see notes above
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
+
+:<<'comment'
+#Pi-Hole installation
+curl -sSL https://install.pi-hole.net | bash
+
+#Unbound
+sudo apt update && sudo apt install unbound
+wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound/root.hints
+
+comment
